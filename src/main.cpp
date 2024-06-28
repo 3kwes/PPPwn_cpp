@@ -185,12 +185,5 @@ int main(int argc, char *argv[]) {
     exploit->setAutoRetry(retry);
     exploit->setRealSleep(real_sleep);
 
-    if (web_page) {
-        web = std::make_shared<WebPage>(exploit);
-        web->setUrl(web_url);
-        web->run();
-        return 0;
-    }
-
     return exploit->run();
 }
