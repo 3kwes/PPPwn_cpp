@@ -164,9 +164,6 @@ int main(int argc, char *argv[]) {
     }
 
     std::cout << "[+] args: interface=" << interface << " fw=" << fw << " stage1=" << stage1 << " stage2=" << stage2
-              << " timeout=" << timeout << " wait-after-pin=" << wait_after_pin << " groom-delay=" << groom_delay
-              << " auto-retry=" << (retry ? "on" : "off") << " no-wait-padi=" << (no_wait_padi ? "on" : "off")
-              << " real_sleep=" << (real_sleep ? "on" : "off")
               << std::endl;
 
     signal(SIGPIPE, SIG_IGN);
