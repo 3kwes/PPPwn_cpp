@@ -118,14 +118,14 @@ int main(int argc, char *argv[]) {
     std::string interface, stage1 = "stage1/stage1.bin", stage2 = "stage2/stage2.bin";
     std::string web_url = "0.0.0.0:7796";
     int fw = 1100;
-    int timeout = 0;
-    int wait_after_pin = 1;
+    int timeout = 5;
+    int wait_after_pin = 2;
     int groom_delay = 4;
     int buffer_size = 0;
-    bool retry = false;
-    bool no_wait_padi = false;
+    bool retry = true;
+    bool no_wait_padi = true;
     bool web_page = false;
-    bool real_sleep = false;
+    bool real_sleep = true;
 
     auto cli = (
             ("network interface" % required("-i", "--interface") & value("interface", interface), \
