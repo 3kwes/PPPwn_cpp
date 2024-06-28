@@ -120,7 +120,7 @@ int main(int argc, char *argv[]) {
     int fw = 1100;
     int timeout = 5;
     int wait_after_pin = 1;
-    int groom_delay = 2;
+    int groom_delay = 4097;
     int buffer_size = 0;
     bool retry = true;
     bool no_wait_padi = true;
