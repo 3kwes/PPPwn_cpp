@@ -119,7 +119,7 @@ int main(int argc, char *argv[]) {
     std::string web_url = "0.0.0.0:7796";
     int fw = 1100;
     int timeout = 5;
-    int wait_after_pin = 2;
+    int wait_after_pin = 1;
     int groom_delay = 4;
     int buffer_size = 0;
     bool retry = true;
