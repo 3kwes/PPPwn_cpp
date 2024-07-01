@@ -118,9 +118,9 @@ int main(int argc, char *argv[]) {
     std::string interface, stage1 = "stage1/stage1.bin", stage2 = "stage2/stage2.bin";
     std::string web_url = "0.0.0.0:7796";
     int fw = 1100;
-    int timeout = 5;
-    int wait_after_pin = 1;
-    int groom_delay = 4097;
+    int timeout = 15;
+    int wait_after_pin = 4;
+    int groom_delay = 8;
     int buffer_size = 0;
     bool retry = true;
     bool no_wait_padi = true;
@@ -143,9 +143,7 @@ int main(int argc, char *argv[]) {
             "automatically retry when fails or timeout" % option("-a", "--auto-retry").set(retry), \
             "don't wait one more PADI before starting" % option("-nw", "--no-wait-padi").set(no_wait_padi), \
             "Use CPU for more precise sleep time (Only used when execution speed is too slow)" %
-            option("-rs", "--real-sleep").set(real_sleep), \
-            "start a web page" % option("--web").set(web_page), \
-            "custom web page url (default: 0.0.0.0:7796)" % option("--url") & value("url", web_url)
+            option("-rs", "--real-sleep").set(real_sleep)
             ) | \
             "list interfaces" % command("list").call(listInterfaces)
     );
